@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MenuCard from '../components/MenuCard.astro';
+
+const menu = [
+    {
+        nombre: "Paella Valenciana",
+        descripcion: "Arroz con azafrán, mariscos frescos y verduras de temporada",
+        precio: 24.99,
+        imagen: "/images/paella.jpg",
+        categoria: "Especialidades"
+    },
+    {
+        nombre: "Pasta al Pesto",
+        descripcion: "Pasta fresca con salsa pesto casera y piñones tostados",
+        precio: 18.99,
+        imagen: "/images/pasta.jpg",
+        categoria: "Pasta"
+    },
+    {
+        nombre: "Pizza Margherita",
+        descripcion: "Pizza artesanal con tomate, mozzarella y albahaca fresca",
+        precio: 16.99,
+        imagen: "/images/pizza.jpg",
+        categoria: "Pizza"
+    }
+];
+---
+
+<Layout title="Menú - Mi Restaurante">
+    <h1 class="text-3xl font-bold text-center text-amber-800 mb-8">Nuestro Menú</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {menu.map((plato) => (
+            <MenuCard {...plato} />
+        ))}
+    </div>
+</Layout>

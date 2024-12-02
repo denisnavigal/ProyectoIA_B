@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mi Restaurante - Inicio">
+	<div class="text-center py-12">
+		<h1 class="text-4xl font-bold text-amber-800 mb-4">Bienvenidos a Mi Restaurante</h1>
+		<p class="text-xl text-gray-600 mb-8">Descubre nuestra deliciosa cocina y comparte tu experiencia</p>
+		
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+			<a href="/menu" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+				<h2 class="text-2xl font-bold text-amber-700 mb-2">Nuestro Menú</h2>
+				<p class="text-gray-600">Explora nuestra variedad de platillos preparados con los mejores ingredientes</p>
+			</a>
+			
+			<a href="/opiniones" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+				<h2 class="text-2xl font-bold text-amber-700 mb-2">Opiniones</h2>
+				<p class="text-gray-600">Comparte tu experiencia y lee las reseñas de otros clientes</p>
+			</a>
+		</div>
+	</div>
+</Layout>
